@@ -49,5 +49,34 @@ car2 = Product.create(name:"Mercedes Benz", description:"Mercedes Benz", price:3
 laptop1 = Product.create(name:"mac book", description:"Apple MacBook Air M1 MGND3 13.3″ 13 inch", price:199, image_url:"https://image.kilimall.com/kenya/shop/store/goods/7966/2022/03/1647720309326066036a288a440febd9b5657ff80ebda_720.jpeg.webp", category_id: laptops.id)
 laptop2 = Product.create(name:"Dell latitude", description:"Latitude 5420 Laptop", price:197, image_url:"https://i.dell.com/is/image/DellContent//content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/14-5420/media-gallery/la5420nt_cnb_00055lf110_gy_5000x5000_gettyimages-1254825733.psd?fmt=pjpg&pscan=auto&scl=1&wid=4384&hei=2671&qlt=100,1&resMode=sharp2&size=4384,2671&chrss=full&imwidth=5000", category_id: laptops.id)
 
+
+
+######################## USERS ###################################################
+10.times do
+    User.create(
+        name: Faker::Name.name_with_middle,
+        username: Faker::Internet.user('username'),
+        address: Faker::Address.street_address,
+        email: Faker::Internet.free_email,
+        phone_number: Faker::PhoneNumber.phone_number_with_country_code
+    )
+end
+
+
+
+######################## REVIEWS #################################################
+rev_1 = Review.create(user_id: 1, product_id: shoe1.id, content: "Good experience",  star_rating: 4)
+rev_2 = Review.create(user_id: 2, product_id: car1.id, content: "as good as original ", star_rating: 4)
+rev_3 = Review.create(user_id: 3, product_id: laptop1.id, content: "sitable experience", star_rating: 2)
+rev_4 = Review.create(user_id: 4, product_id:  watch1.id, content: "amazing site", star_rating: 5)
+
+
+
+
+
+
+
+
+
 puts "Done 🌱seeding! "
 puts "Done 🌱seeding! "
