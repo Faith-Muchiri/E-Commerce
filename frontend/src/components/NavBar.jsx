@@ -18,7 +18,7 @@ function NavBar() {
     const isMatch = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
-    <AppBar sx={{background:"#063970"}}>
+    <AppBar sx={{background:"#063970"}} paddingBottom={40}>
         <Toolbar>            
                 {isMatch ? (
                     <>
@@ -29,7 +29,7 @@ function NavBar() {
                     </>                   
                 ) : (
                     <>
-                        <Tabs sx={{marginLeft: "auto"}} textColor="inherit" value={value} onChange={(e,value)=>setValue(value)} indicatorColor="secondary">
+                        <Tabs sx={{marginLeft: "auto"}} alignItems={"center"} textColor="inherit" value={value} onChange={(e,value)=>setValue(value)} indicatorColor="secondary">
                             <Link to="/"><Tab label="Home"/></Link>                          
                             <Link to="/about"> <Tab label="About"/> </Link>
                             <Link to="/products"><Tab label="Products"/></Link>                                                
