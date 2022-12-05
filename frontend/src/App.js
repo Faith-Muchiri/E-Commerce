@@ -7,7 +7,7 @@ import Logout from './components/Logout';
 import Products from './components/Products';
 
 function App() {
-  return (
+  return (   
     <BrowserRouter>    
       <div className="App">
         <NavBar/>
