@@ -1,4 +1,5 @@
 import './App.css';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from './components/Home';
 import Login from './components/Login';
 import Logout from './components/Logout';
@@ -6,12 +7,17 @@ import Products from './components/Products';
 
 function App() {
   return (
-    <div className="App">
-      <Home/>
-      <Login/>
-      <Logout/>
-      <Products/>
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/logout" element={<Logout/>}/>
+          <Route path="/products" element={<Products/>}/>
+        </Routes>
     </div>
+    </BrowserRouter>
+
   );
 }
 
