@@ -2,6 +2,9 @@ import React, {useState} from 'react'
 import Box from '@mui/material/Box';
 import { Button, TextField, Typography } from '@mui/material';
 import { SettingsInputSvideo } from '@mui/icons-material';
+import LoginOutlinedIcon from '@mui/icons-material/LoginOutlined';
+import LockOpenOutlinedIcon from '@mui/icons-material/LockOpenOutlined';
+
 
 function Login() {
 const [isSignup, setIsSignup] = useState(false)
@@ -74,11 +77,18 @@ const resetState = () => {
             type={'password'} 
             variant='outlined' 
             placeholder='Password'/>
-          <Button type='submit' sx={{ marginTop:3, borderRadius: 5}} variant="contained" color='warning'>
+          <Button 
+            endIcon={isSignup ? <LockOpenOutlinedIcon/> : <LoginOutlinedIcon/>}
+            type='submit' 
+            sx={{ marginTop:3, 
+            borderRadius: 5}} 
+            variant="contained" 
+            color='warning'>
             {/* Login */}
             {isSignup ? "SignUp": "Login"}
           </Button>
           <Button 
+            endIcon={isSignup ? <LoginOutlinedIcon/> : <LockOpenOutlinedIcon/>}
             onClick={resetState} 
             sx={{ marginTop:3, borderRadius: 5}} 
             // variant="contained" 
