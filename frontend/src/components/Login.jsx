@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Box from '@mui/material/Box';
 import { Button, TextField, Typography } from '@mui/material';
+import { SettingsInputSvideo } from '@mui/icons-material';
 
 function Login() {
 const [isSignup, setIsSignup] = useState(false)
@@ -10,9 +11,26 @@ const [input, setInput] = useState({
   password:"",
 })
 
+const handleChange = (e) => {
+  setInput((prevState) => ({
+    ...prevState,
+    [e.target.name] : EventTarget.value
+  })) 
+}
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  console.log(input);
+}
+
+const resetState = () => {
+  setIsSignup(!isSignup)
+  SettingsInputSvideo({name:"", email:"",password:""})
+}
+
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <Box display="flex" 
         flexDirection={"column"} 
         maxWidth={400} 
@@ -32,16 +50,36 @@ const [input, setInput] = useState({
             {isSignup ? "SignUp": "Login"}
           </Typography>
           { isSignup &&
-            <TextField name="name" value={input.name} margin='normal' type={'text'} variant='outlined' placeholder='Name'/>
+            <TextField 
+            onChange={handleChange}
+            name="name" 
+            value={input.name} 
+            margin='normal' 
+            type={'text'} 
+            variant='outlined' 
+            placeholder='Name'/>
           }
-          <TextField name="email" value={input.email} margin='normal' type={'email'} variant='outlined' placeholder='Email'/>
-          <TextField name="password" value={input.password} margin='normal' type={'password'} variant='outlined' placeholder='Password'/>
-          <Button sx={{ marginTop:3, borderRadius: 5}} variant="contained" color='warning'>
+          <TextField 
+            onChange={handleChange}
+            name="email" 
+            value={input.email} 
+            margin='normal' type={'email'} 
+            variant='outlined' 
+            placeholder='Email'/>
+          <TextField
+            onChange={handleChange} 
+            name="password" 
+            value={input.password} 
+            margin='normal' 
+            type={'password'} 
+            variant='outlined' 
+            placeholder='Password'/>
+          <Button type='submit' sx={{ marginTop:3, borderRadius: 5}} variant="contained" color='warning'>
             {/* Login */}
             {isSignup ? "SignUp": "Login"}
           </Button>
           <Button 
-            onClick={()=> setIsSignup(!isSignup)} 
+            onClick={resetState} 
             sx={{ marginTop:3, borderRadius: 5}} 
             // variant="contained" 
             color='warning'>
