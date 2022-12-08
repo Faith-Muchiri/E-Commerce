@@ -1,25 +1,28 @@
-import './App.css';
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import NavBar from './components/NavBar'
-import Home from './components/Home';
-import Login from './components/Login';
-import Logout from './components/Logout';
-import Products from './components/Products';
+import React, { useEffect } from "react";
+// import "./App.css";
+import Header from "./header";
+import Home from "./home";
+import Login from "./login";
+import ProductDescription from "./productDescription";
+import Checkout from "./checkout";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useStateValue } from "./stateProvider";
 
 function App() {
-  return (   
-    <BrowserRouter>    
-      <div className="App">
-        <NavBar/>
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/logout" element={<Logout/>}/>
-          <Route path="/products" element={<Products/>}/>
-        </Routes>
-      </div>
-    </BrowserRouter>
-  );
+    return (
+        <Router>
+            {/* Routes to different pages */}
+            <Routes>
+                <Route exact path="/" element={<Home />}></Route>
+                <Route path="/login" element={<Login />}></Route>
+                <Route
+                    path="/product/:id"
+                    element={<ProductDescription />}
+                />{" "}
+                <Route path="/checkout" element={<Checkout />} />
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;
