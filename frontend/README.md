@@ -26,12 +26,12 @@ The inspiration of this app came while brainstorming for ideas help people adver
    * review cart's total dollar amount before checkout
 
 ## Take a Look! 📷
-<>
-<img src='frontend/assets/Screenshot from 2022-12-09 17-27-27.png'> </img>
-<img src='frontend/assets/Screenshot from 2022-12-09 17-27-40.png'> </img>
-<img src='frontend/assets/Screenshot from 2022-12-09 17-27-40.png'> </img>
-<img src='frontend/assets/Screenshot from 2022-12-09 17-27-40.png'> </img>
-<img src='frontend/assets/Screenshot from 2022-12-09 17-27-40.png'> </img>
+
+<img src='frontend/assets/login.png'/> 
+<img src='frontend/assets/products.png'/> 
+<img src='frontend/assets/product.png'/> 
+<img src='frontend/assets/cart.png'/> 
+<img src='frontend/assets/logout.png'/> 
 
 
 
@@ -61,10 +61,5 @@ Please see issues
  
 ## Creator
  * [Faith] (https://github.com/Faith-Muchiri)
-
- 
-
-
-
 
  
