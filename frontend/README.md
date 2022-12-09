@@ -27,7 +27,7 @@ The inspiration of this app came while brainstorming for ideas help people adver
 
 ## Take a Look! 📷
 
-<img src='frontend/assets/login.png'/> 
+<img src='/assets/login.png'/> 
 <img src='frontend/assets/products.png'/> 
 <img src='frontend/assets/product.png'/> 
 <img src='frontend/assets/cart.png'/> 
