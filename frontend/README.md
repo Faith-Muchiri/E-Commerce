@@ -25,7 +25,15 @@ The inspiration of this app came while brainstorming for ideas help people adver
    * update their cart by removing items 
    * review cart's total dollar amount before checkout
 
-<!-- ## Take a Look! 📷 -->
+## Take a Look! 📷
+<>
+<img src='frontend/assets/Screenshot from 2022-12-09 17-27-27.png'> </img>
+<img src='frontend/assets/Screenshot from 2022-12-09 17-27-40.png'> </img>
+<img src='frontend/assets/Screenshot from 2022-12-09 17-27-40.png'> </img>
+<img src='frontend/assets/Screenshot from 2022-12-09 17-27-40.png'> </img>
+<img src='frontend/assets/Screenshot from 2022-12-09 17-27-40.png'> </img>
+
+
 
 
  ## Set-Up 
@@ -52,6 +60,11 @@ The inspiration of this app came while brainstorming for ideas help people adver
 Please see issues
  
 ## Creator
- * [Faith} (https://github.com/Faith-Muchiri)
+ * [Faith] (https://github.com/Faith-Muchiri)
+
+ 
+
+
+
 
  
