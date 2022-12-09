@@ -54,11 +54,8 @@ laptop2 = Product.create(name:"Dell latitude", description:"Latitude 5420 Laptop
 ######################## USERS ###################################################
 10.times do
     User.create(
-        name: Faker::Name.name_with_middle,
-        username: Faker::Internet.user('username'),
-        address: Faker::Address.street_address,
         email: Faker::Internet.free_email,
-        phone_number: Faker::PhoneNumber.phone_number_with_country_code
+        password: Faker::Internet.password
     )
 end
 
