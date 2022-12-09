@@ -12,15 +12,15 @@ const ProductDescription = () => {
     const [{}, dispatch] = useStateValue();
 
     // using contextAPI to add items to basket and update the cart
-    const addToBasket = (id, title, image, price, rating) => {
+    const addToBasket = (id, name, image, price, reviews) => {
         dispatch({
             type: "ADD_TO_BASKET",
             item: {
                 id: id,
-                title: title,
+                name: name,
                 image: image,
                 price: price,
-                rating: rating,
+                reviews: reviews
             },
         });
     };
@@ -50,18 +50,18 @@ const ProductDescription = () => {
                     <div className="w-1/2">
                         <img
                             className=" w-9/12 h-56"
-                            src={products[id].image}
+                            src={products[id].image_url}
                         />
                     </div>
                     <div className="w-1/2">
                         <h1 className="text-4xl font-bold">
-                            {products[id].title}
+                            {products[id].name}
                         </h1>
                         <p className="text-lg mt-3">
                             {products[id].description}
                         </p>
                         <p className="text-3xl mt-5">
-                            {"₹" + products[id].amount}
+                            {"$" + products[id].price}
                         </p>
                         <div className="flex mt-5 w-5/12 justify-between">
                             <button
@@ -69,9 +69,9 @@ const ProductDescription = () => {
                                     addToBasket(
                                         products[id].id,
                                         products[id].title,
-                                        products[id].image,
-                                        products[id].amount,
-                                        products[id].rating
+                                        products[id].image_url,
+                                        products[id].price,
+                                        products[id].reviews
                                     );
                                     navigate("/checkout");
                                 }}
@@ -84,9 +84,9 @@ const ProductDescription = () => {
                                     addToBasket(
                                         products[id].id,
                                         products[id].title,
-                                        products[id].image,
-                                        products[id].amount,
-                                        products[id].rating
+                                        products[id].image_url,
+                                        products[id].price,
+                                        products[id].reviews
                                     )
                                 }
                                 className="self-end bg-black hover:bg-white text-white font-semibold hover:text-black py-2 px-4 border border-black hover:border-transparent rounded"

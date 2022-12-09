@@ -3,7 +3,7 @@ import { useStateValue } from "./stateProvider";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function Product({ id, title, image, price, rating }) {
+function Product({ id, title, image, price, reviews }) {
     const [{ user }, dispatch] = useStateValue();
     const navigate = useNavigate();
 
@@ -15,13 +15,13 @@ function Product({ id, title, image, price, rating }) {
                 title: title,
                 image: image,
                 price: price,
-                rating: rating,
+                reviews: reviews,
             },
         });
     };
     // PRODUCT CARD - displays product details on home/products page
     return (
-        <div className=" hover:cursor-pointer flex flex-col items-center h-72 sm:w-1/5 w-1/2 bg-white m-2 rounded-md">
+        <div className=" hover:cursor-pointer flex flex-col items-center h-72 sm:w-1/5 w-1/2 bg-blue-100 m-2 rounded-md">
             <img
                 src={image}
                 alt=""
@@ -31,10 +31,10 @@ function Product({ id, title, image, price, rating }) {
             <div className=" p-2 h-fit mb-7">
                 <p>{title}</p>
                 <p className="mt-1">
-                    <span>₹{price}</span>
+                    <span>${price}</span>
                 </p>
-                <div className="flex items-center justify-center bg-green-400 w-5 h-4 text-xs ">
-                    {rating}
+                <div className="flex items-center justify-center bg-blue-300 w-5 h-4 text-xs ">
+                    {reviews}
                 </div>
             </div>
             <div className="flex w-full place-content-between px-1">
@@ -47,7 +47,7 @@ function Product({ id, title, image, price, rating }) {
                                 title: title,
                                 image: image,
                                 price: price,
-                                rating: rating,
+                                reviews: reviews,
                             },
                         }).then((res) => {
                             console.log(res);

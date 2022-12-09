@@ -17,7 +17,7 @@ function Header() {
     };
 
     return (
-        <header className=" bg-blue-400 z-10 top-0 sticky">
+        <header className=" bg-blue-300 z-10 top-0 sticky">
             <div className="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-1 md:flex md:items-center md:gap-12">
@@ -54,10 +54,10 @@ function Header() {
                         <div className="flex items-center gap-2">
                             <div className="sm:gap-4 sm:flex">
                                 <a
-                                    className="px-5 py-2.5 text-sm font-medium text-white bg-teal-600 rounded-md shadow cursor-pointer"
+                                    className="px-5 py-2.5 text-sm font-medium text-white bg-blue-400 rounded-md shadow cursor-pointer"
                                     onClick={handleLogout}
                                 >
-                                    {user == null ? "Login" : "Logout"}
+                                    {user === null ? "Login" : "Logout"}
                                 </a>
                             </div>
                         </div>

@@ -3,7 +3,7 @@ import Header from "./header";
 import Product from "./product";
 import axios from "axios";
 import { useStateValue } from "./stateProvider";
-import { Link } from "react-router-dom";
+
 
 const Home = () => {
     const { user } = useStateValue();
@@ -19,7 +19,7 @@ const Home = () => {
             });
     }, []);
     return (
-        <div className=" min-h-screen  bg-slate-300">
+        <div className=" min-h-screen  bg-white">
             <Header />
 
             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center sm:justify-center">
@@ -31,7 +31,7 @@ const Home = () => {
                         title={product.name}
                         image={product.image_url}
                         price={product.price}
-                        rating={product.rating}
+                        reviews={product.reviews}
                     />
                 ))}
             </div>

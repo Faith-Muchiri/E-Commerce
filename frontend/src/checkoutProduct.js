@@ -2,15 +2,15 @@ import React from "react";
 import { useStateValue } from "./stateProvider";
 
 // This is the component that will be used to display the product description of the products in cart
-const CheckoutProduct = ({ id, title, image, price, rating }) => {
+const CheckoutProduct = ({ id, name, image, price, rating }) => {
     const [{}, dispatch] = useStateValue();
     return (
         <div className="shadow-md mt-2">
             <div className="flex">
-                <img className="w-20 h-20" src={image} alt={title} />
+                <img className="w-20 h-20" src={image} alt={name} />
                 <div className="ml-4 w-2/3">
-                    <h4 className="text-sm">{title}</h4>
-                    <p className=" text-sm">₹{price}</p>
+                    <h4 className="text-sm">{name}</h4>
+                    <p className=" text-sm">${price}</p>
                 </div>
                 <div className="flex justify-between">
                     <button
