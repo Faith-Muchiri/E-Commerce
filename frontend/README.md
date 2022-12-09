@@ -27,11 +27,11 @@ The inspiration of this app came while brainstorming for ideas help people adver
 
 ## Take a Look! 📷
 
-<img src='/assets/login.png'/> 
-<img src='frontend/assets/products.png'/> 
-<img src='frontend/assets/product.png'/> 
-<img src='frontend/assets/cart.png'/> 
-<img src='frontend/assets/logout.png'/> 
+<img src='frontend/assets/login.png'></img> 
+<img src='frontend/assets/products.png'></img> 
+<img src='frontend/assets/product.png'></img> 
+<img src='frontend/assets/cart.png'></img> 
+<img src='frontend/assets/logout.png'></img> 
 
 
 
