@@ -2,6 +2,7 @@ databases:
   - name: mysite
     databaseName: mysite
     user: mysite
+    key: RAILS_MASTER_KEY
  services:
  - type: pserv
    name: pgbouncer
