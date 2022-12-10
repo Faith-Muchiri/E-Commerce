@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'render/index'
   resources :reviews
   resources :cartitems
   resources :carts
@@ -19,4 +20,10 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   get '/me', to: 'users#show'
   post '/signup', to: 'users#create'
+
+  Rails.application.routes.draw do
+    get 'render/index'
+   
+    # For more details on this file's DSL, see https://guides.rubyonrails.org/routing.html
+    root 'render#index'end
 end
