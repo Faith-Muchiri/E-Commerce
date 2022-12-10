@@ -1,6 +1,6 @@
 databases:
   - name: e-commerce
-    databaseName: sqlite3
+    databaseName:  PostgreSQL
     user: fayth
 
 services:
@@ -14,7 +14,7 @@ services:
         sync: false
       - key: DATABASE_URL
         fromDatabase:
-          name: sqlite3
+          name:  PostgreSQL 
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
