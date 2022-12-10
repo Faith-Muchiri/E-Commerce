@@ -1,5 +1,5 @@
 databases:
-  - name: e-commerce
+  - name: e-shop
     databaseName:   postgres
     user: fayth
 
