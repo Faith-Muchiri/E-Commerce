@@ -13,7 +13,7 @@ function Header() {
                 user: null,
             });
         }
-        navigate("/login");
+        navigate("https://e-commerce-wrnx.onrender.com/login");
     };
 
     return (

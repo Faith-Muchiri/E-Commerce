@@ -14,7 +14,7 @@ const Login = () => {
     const login = () => {
         axios({
             method: "post",
-            url: "/login",
+            url: "https://e-commerce-wrnx.onrender.com/login",
             data: {
                 email: email,
                 password: password,
@@ -40,7 +40,7 @@ const Login = () => {
     const register = () => {
         axios({
             method: "post",
-            url: "/signup",
+            url: "https://e-commerce-wrnx.onrender.com/signup",
             data: {
                 email: email,
                 password: password,

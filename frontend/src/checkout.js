@@ -60,9 +60,10 @@ const Checkout = () => {
                                     Your Shopping Basket is empty
                                 </h2>
                                 <p>
-                                    You have no items in your basket. To add
+                                    {/* You have no items in your basket. To add
                                     items to the basket, click "Add to Basket"
-                                    next to the item
+                                    next to the item */}
+                                    Empty Cart
                                 </p>
                             </div>
                         ) : (

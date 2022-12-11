@@ -40,7 +40,7 @@ function Product({ id, title, image, price, reviews }) {
             <div className="flex w-full place-content-between px-1">
                 <button
                     onClick={() => {
-                        axios(`/favourites/`, {
+                        axios(`https://e-commerce-wrnx.onrender.com/favourites`, {
                             method: "POST",
                             data: {
                                 id: id,

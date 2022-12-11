@@ -2,6 +2,12 @@ E-commerce
 
 Check out the <a href=""> demo here </a>🎬
 
+## Backend endpoints link
+https://e-commerce-wrnx.onrender.com
+https://e-commerce-wrnx.onrender.com/products
+https://e-commerce-wrnx.onrender.com/products/id
+https://e-commerce-wrnx.onrender.com/users
+
 e-shop is a single-page e-commerce web application that allows users to purchase products. <br>
 The inspiration of this app came while brainstorming for ideas help people advertise their businesses online to reach out to more customers. The products displayed on the app are a neccessary part of our every day lives.
 

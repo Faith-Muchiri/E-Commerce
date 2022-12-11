@@ -10,7 +10,7 @@ const Home = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
         axios
-            .get("/products")
+            .get("https://e-commerce-wrnx.onrender.com/products")
             .then((res) => {
                 setProducts(res.data);
             })

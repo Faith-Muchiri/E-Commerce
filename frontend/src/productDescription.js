@@ -30,7 +30,7 @@ const ProductDescription = () => {
     useEffect(() => {
         async function fetchData() {
             await axios
-                .get("/products")
+                .get("https://e-commerce-wrnx.onrender.com/products")
                 .then((res) => {
                     console.log(res.data);
                     setProducts(res.data);
@@ -73,7 +73,7 @@ const ProductDescription = () => {
                                         products[id].price,
                                         products[id].reviews
                                     );
-                                    navigate("/checkout");
+                                    navigate("https://e-commerce-wrnx.onrender.com/checkout");
                                 }}
                                 className="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded "
                             >
